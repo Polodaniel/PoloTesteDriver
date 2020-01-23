@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PoloTesteDriver.View.DetalhesView"
+             Title="{Binding veiculo.Nome}">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <!--<Label Text="" 
+                   VerticalOptions="StartAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="10">
+                
+            </Label>-->
+
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Acessorios para o Veiculo">
+                        <SwitchCell Text="{Binding TextoFeioABS}" On="{Binding TemFreioABS, Mode=TwoWay}"></SwitchCell>
+                        <SwitchCell Text="{Binding TextoArCondicionado}" On="{Binding TemArCondicionado, Mode=TwoWay}"></SwitchCell>
+                        <SwitchCell Text="{Binding TextoVidroEletrico}" On="{Binding TemVidroEletrico, Mode=TwoWay}"></SwitchCell>
+                        <SwitchCell Text="{Binding TextoDirecaoHidraulica}" On="{Binding TemDirecaoHidraulica, Mode=TwoWay}"></SwitchCell>
+                        <TextCell Text="{Binding ValorTotal}"></TextCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            
+            <Button x:Name="btnProximo" 
+                    Text="Finalizar Reserva" 
+                    Clicked="btnProximo_Clicked"
+                    VerticalOptions="End">
+            </Button>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
