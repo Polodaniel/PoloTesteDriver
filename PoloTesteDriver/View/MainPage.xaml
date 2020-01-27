@@ -3,11 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PoloTesteDriver"
+             xmlns:vm="clr-namespace:PoloTesteDriver.ViewModel"
              Title="Polo Teste Drive"
              mc:Ignorable="d"
              x:Class="PoloTesteDriver.View.MainPage">
 
 
+    <ContentPage.BindingContext>
+        <vm:ListagemViewModel></vm:ListagemViewModel>
+    </ContentPage.BindingContext>
+    
     <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="10"
               ItemTapped="listViewVeiculos_ItemTapped">
         <ListView.ItemTemplate>
