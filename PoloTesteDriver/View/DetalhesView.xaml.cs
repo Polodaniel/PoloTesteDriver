@@ -14,6 +14,8 @@ namespace PoloTesteDriver.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetalhesView : ContentPage
     {
+        public Veiculo veiculo { get; set; }
+
         public DetalhesView()
         {
             InitializeComponent();
@@ -22,6 +24,8 @@ namespace PoloTesteDriver.View
         public DetalhesView(Veiculo veiculo)
         {
             InitializeComponent();
+            this.veiculo = veiculo;
+
             this.BindingContext = new DetalhesViewModel(veiculo);
         }
 

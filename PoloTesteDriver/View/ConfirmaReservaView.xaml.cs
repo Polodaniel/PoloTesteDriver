@@ -98,8 +98,8 @@ namespace PoloTesteDriver.View
                          "\nNome: " + Nome +
                          "\nFone: " + Fone +
                          "\nE-mail: " + Email +
-                         "\nData Agendamento: " + DataAgendamento.ToString("dd/MM/yyyy") + 
-                         "\nHora Agendamento: " + HoraAgendamento;
+                         "\nData Agenda.: " + DataAgendamento.ToString("dd/MM/yyyy") + 
+                         "\nHora Agenda.: " + HoraAgendamento;
 
             DisplayAlert("Confirmar Agendamento", Msg, "Sim");
         }
